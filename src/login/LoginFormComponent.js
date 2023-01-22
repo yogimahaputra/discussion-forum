@@ -16,9 +16,9 @@ const LoginFormComponent = ({ login }) => {
 
     return (
         <form onSubmit={loginAction} method='post' >
-            <p className="mb-4">Please login to your account</p>
+            <p className="mb-4">Please login to your account, here ^_^</p>
             <div className="mb-4">
-                <input onChange={handleChange} value={input.email} required name="email" type="email" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="emaill" />
+                <input onChange={handleChange} value={input.email} required name="email" type="email" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Email" />
             </div>
             <div className="mb-4">
                 <input onChange={handleChange} value={input.password} required name="password" type="password" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Password" />
