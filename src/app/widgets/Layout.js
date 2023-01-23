@@ -1,7 +1,10 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Outlet } from 'react-router-dom'
-import Navbar from '../components/Navbar'
+
+import loadable from '@loadable/component'
+
+const Navbar = loadable(() => import('../components/Navbar'))
 
 const Layout = () => {
     const { authUsers } = useSelector((states) => states)

@@ -2,7 +2,9 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { asyncGetOneThreads } from './DetailAction'
-import DetailListComponent from './DetailListComponent'
+import loadable from '@loadable/component'
+
+const DetailListComponent = loadable(() => import('./DetailListComponent'))
 
 const Detail = () => {
   const {

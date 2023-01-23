@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import Loading from './components/LoadingBar'
 import { asyncPreloadProcess } from './shared/LoadingAction'
 import { authRoutes, routes } from './routes'
-import Layout from './widgets/Layout'
+
+import loadable from '@loadable/component'
+
+const Layout = loadable(() => import('./widgets/Layout'))
+const Loading = loadable(() => import('./components/LoadingBar'))
 
 const App = () => {
   const { isPreload = false, authUsers } = useSelector((states) => states)
