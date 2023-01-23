@@ -2,7 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { asyncSetAuthUser } from './LoginAction'
-import LoginFormComponent from './LoginFormComponent'
+
+import loadable from '@loadable/component'
+
+const LoginFormComponent = loadable(() => import('./LoginFormComponent'))
 
 const Login = () => {
   const dispatch = useDispatch()

@@ -1,7 +1,9 @@
-import Detail from '../detail'
-import Home from '../home'
-import Login from '../login'
-import Register from '../register'
+import loadable from '@loadable/component'
+
+const Detail = loadable(() => import('../detail'))
+const Home = loadable(() => import('../home'))
+const Login = loadable(() => import('../login'))
+const Register = loadable(() => import('../register'))
 
 const routes = [
     {

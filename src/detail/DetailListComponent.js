@@ -4,9 +4,12 @@ import { ThumbDownIcon } from '../app/icons/Dislike'
 import { ThumbUpIcon } from '../app/icons/Like'
 import PropTypes from 'prop-types'
 import HTMLReactParser from 'html-react-parser'
-import DetailCardComments from './DetailCardComments'
 import { showFormattedDate } from '../app/utils/formatDate'
-import DetailFormComments from './DetailFormComments'
+
+import loadable from '@loadable/component'
+
+const DetailFormComments = loadable(() => import('./DetailFormComments'))
+const DetailCardComments = loadable(() => import('./DetailCardComments'))
 
 const DetailListComponent = ({ owner, id, title, category, comments, body, createdAt, downVotesBy, upVotesBy }) => {
     return (

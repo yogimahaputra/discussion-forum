@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import Skeleton from '../app/components/Skeleton'
 import { fetchstatusProcess } from '../app/shared/FetchstatusAction'
 import { asyncGetAllThreads } from './HomeAction'
-import CardComponent from './HomeCardComponent'
-import HomeFormThreads from './HomeFormThreads'
+import loadable from '@loadable/component'
+
+const CardComponent = loadable(() => import('./HomeCardComponent'))
+const HomeFormThreads = loadable(() => import('./HomeFormThreads'))
+const Skeleton = loadable(() => import('../app/components/Skeleton'))
 
 const Home = () => {
   const { fetchstatus = false, authUsers, threads = [] } = useSelector((states) => states)

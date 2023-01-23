@@ -2,7 +2,10 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { asyncRegisterUsers } from './RegisterAction'
-import RegsisterFormComponent from './RegsisterFormComponent'
+
+import loadable from '@loadable/component'
+
+const RegsisterFormComponent = loadable(() => import('./RegsisterFormComponent'))
 
 const Register = () => {
     const dispatch = useDispatch()
